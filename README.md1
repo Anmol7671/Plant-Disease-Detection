@@ -1,0 +1,137 @@
+# 🌱 Plant Disease Detection using CNN
+
+## 📌 Project Overview
+This project focuses on detecting plant leaf diseases using **Convolutional Neural Networks (CNN)**.  
+By analyzing leaf images, the model classifies whether a plant is healthy or affected by a specific disease.  
+The goal is to assist in **early disease detection** and support modern agricultural practices.
+
+---
+
+## 🎯 Objective
+- To build an automated image classification system for plant disease detection  
+- To train a CNN model that can learn visual patterns from leaf images  
+- To perform inference on unseen images with confidence scores  
+
+---
+
+## 🗂️ Dataset
+- **Dataset Used:** PlantVillage Dataset  
+- **Data Type:** RGB images of plant leaves  
+- **Structure:** Folder-based (each folder represents one disease class)
+
+Example:
+dataset/
+├── Tomato_Healthy/
+├── Tomato_Early_Blight/
+├── Potato_Late_Blight/
+└── Pepper_Bacterial_Spot/
+
+
+The dataset is split into:
+- Training set  
+- Validation set  
+
+---
+
+## ⚙️ Technologies Used
+- Python  
+- TensorFlow / Keras  
+- Convolutional Neural Networks (CNN)  
+- NumPy  
+- Matplotlib  
+- Jupyter Notebook  
+
+---
+
+## 🧠 Model Architecture
+The CNN model consists of:
+- Conv2D layers for feature extraction  
+- ReLU activation for non-linearity  
+- MaxPooling2D for downsampling  
+- Flatten layer to convert features into vectors  
+- Dense layers for classification  
+- Softmax output layer for multi-class prediction  
+
+---
+
+## 🚀 Workflow
+1. Load dataset from directory  
+2. Resize and normalize images  
+3. Optimize data pipeline (cache, shuffle, prefetch)  
+4. Build CNN architecture  
+5. Compile the model  
+6. Train the model  
+7. Evaluate accuracy and loss  
+8. Perform inference on new images  
+
+---
+
+## 📊 Results
+- **Training Accuracy:** ~84%  
+- **Validation Accuracy:** ~82% (approx.)  
+
+The model demonstrates stable learning and good generalization on unseen data.
+
+---
+
+## 🔍 Inference Example
+The trained model can predict disease from a new leaf image by:
+- Loading the image  
+- Applying the same preprocessing as training  
+- Predicting class probabilities  
+- Selecting the class with highest confidence  
+
+Output:
+- Predicted disease name  
+- Confidence percentage  
+
+---
+
+## 📁 Project Structure
+Plant-Disease-Detection-CNN/
+│
+├── dataset/
+├── notebook/
+│ └── plant_disease_detection.ipynb
+├── saved_model/
+│ └── plant_disease_model.h5
+├── test_images/
+├── README.md
+└── REPORT.md
+
+
+---
+
+## 🧪 Applications
+- Smart farming systems  
+- Crop health monitoring  
+- Agricultural research  
+- Educational projects  
+
+---
+
+## ⚠️ Limitations
+- Model performance depends on dataset quality  
+- Limited to diseases present in training data  
+- Real-world deployment may require further tuning  
+
+---
+
+## 🔮 Future Improvements
+- Add more plant species and diseases  
+- Improve accuracy using data augmentation  
+- Deploy as a web application (Flask / FastAPI)  
+- Integrate with mobile platforms  
+
+---
+
+## ✅ Conclusion
+This project demonstrates how **deep learning and CNNs** can be effectively applied to plant disease detection.  
+With an accuracy of around **84%**, the model provides a reliable foundation for real-world agricultural applications.
+
+---
+
+## 👨‍💻 Author
+**Anmol Gupta**
+
+---
