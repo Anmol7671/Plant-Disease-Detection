@@ -1,0 +1,114 @@
+🌱 Plant Disease Detection Using Convolutional Neural Networks (CNN)
+1. Abstract
+Plant diseases significantly affect agricultural productivity and crop quality. Early detection of plant diseases can help farmers take preventive measures and reduce crop loss.
+This project presents a Plant Disease Detection system using Convolutional Neural Networks (CNN) to classify plant leaf images into healthy and diseased categories. The model is trained on a labeled image dataset and achieves approximately 84% accuracy. The system also supports inference on new unseen images, making it practical for real-world use.
+
+2. Introduction
+Agriculture plays a crucial role in the global economy. Plant diseases often remain unnoticed until they spread widely, leading to major losses. Traditional disease detection methods require expert knowledge and manual inspection, which is time-consuming and error-prone.
+With advancements in Deep Learning and Computer Vision, CNNs have proven to be highly effective in image classification tasks. This project uses CNNs to automatically detect plant diseases from leaf images, providing a fast and accurate solution.
+
+3. Problem Statement
+Manual identification of plant diseases is:
+Time-consuming
+Requires expert knowledge
+Not scalable for large farms
+Objective:
+To build an automated system that detects plant diseases from leaf images using a CNN-based image classification model.
+
+4. Dataset Description
+The project uses the PlantVillage dataset, which contains images of healthy and diseased plant leaves.
+Dataset Characteristics:
+RGB leaf images
+Multiple plant and disease categories
+Folder-based structure (each folder = one class)
+Example Classes:
+Tomato – Healthy
+Tomato – Early Blight
+Potato – Late Blight
+Pepper – Bacterial Spot
+The dataset is split into:
+Training set
+Validation set
+
+5. Methodology
+The project follows these steps:
+Dataset loading from directory
+Image resizing and normalization
+Performance optimization using caching and prefetching
+CNN model construction
+Model training and validation
+Model evaluation
+Inference on new images
+
+6. Data Preprocessing
+Image Resizing
+All images are resized to a fixed size (e.g., 224 × 224) to maintain consistent input shape for the CNN.
+Normalization
+Pixel values are scaled from 0–255 to 0–1 using normalization.
+This improves training stability and faster convergence.
+Performance Optimization
+cache() – avoids repeated disk reads
+shuffle() – prevents learning order bias
+prefetch() – improves training speed
+
+7. CNN Model Architecture
+The CNN model consists of the following layers:
+Conv2D Layer
+Extracts features like edges and textures
+Uses multiple filters
+ReLU Activation
+Introduces non-linearity
+MaxPooling2D
+Reduces spatial dimensions
+Prevents overfitting
+Flatten Layer
+Converts feature maps into a 1D vector
+Dense Layers
+Fully connected layers for classification
+Output Layer (Softmax)
+Produces probability scores for each class
+
+8. Model Training
+Optimizer: Adam
+Loss Function: Sparse Categorical Crossentropy
+Metrics: Accuracy
+Epochs: Multiple epochs until convergence
+The model learns patterns such as:
+Leaf color changes
+Texture variations
+Disease spots and edges
+
+9. Results and Performance
+Model Performance:
+Training Accuracy: ~84%
+Validation Accuracy: ~82% (approx.)
+The model shows good generalization on unseen validation data.
+Accuracy and loss graphs indicate stable learning without overfitting.
+
+10. Model Inference
+After training, the model is used to predict disease from a new leaf image.
+Inference Steps:
+Load trained model
+Load and resize image
+Normalize pixel values
+Predict class probabilities
+Select class with highest probability
+Output:Predicted disease name
+Confidence score (%)
+
+11. Future Scope
+Add more plant species and diseases
+Deploy using Flask or FastAPI
+Integrate with mobile applications
+Improve accuracy using data augmentation
+
+12. Conclusion
+This project demonstrates how CNNs can be effectively used for plant disease detection using image classification. The system achieves good accuracy and can perform inference on new images. With further improvements and deployment, it can be a valuable tool for modern agriculture.
+
+13. Technologies Used
+Python
+TensorFlow / Keras
+CNN
+NumPy
+Matplotlib
+Jupyter Notebook
