@@ -1,0 +1,23 @@
+I have downloaded the data from Kaggle.com :- https://www.kaggle.com/
+# 📁 Dataset
+
+The dataset used in this project is too large to be hosted on GitHub.
+
+You can download it from the link below:
+
+🔗 Download Dataset:
+
+
+After downloading:
+
+1️⃣ Extract the zip file
+2️⃣ Place the folder inside the project directory:
+
+```
+project/
+│── dataset/
+│── train.py
+│── model.py
+```
+
+3️⃣ Run the project normally.
