@@ -15,9 +15,13 @@ The goal is to assist in **early disease detection** and support modern agricult
 ---
 
 ## 🗂️ Dataset
-- **Dataset Used:** PlantVillage Dataset  
-- **Data Type:** RGB images of plant leaves  
-- **Structure:** Folder-based (each folder represents one disease class)
+## Dataset
+
+Due to GitHub size limitations, the dataset is hosted externally.
+
+Download it from:
+👉 https://drive.google.com/drive/folders/19MpRHUrDQxem3FMYIKrD53skQ2tfy-q7?usp=drive_link
+
 
 Example:
 dataset/
